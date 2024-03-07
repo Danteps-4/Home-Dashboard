@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    margin-left: 270px;
+    margin-right: 10px;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.sub-title {
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+
+.panel-container {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    transition: .1s ease;
+}
+
+.btn-add {
+    background-color: #18CF10;
+    color: #fff;
+}
+
+.btn-add:hover {
+    background-color: #139e0c;
+}
+
+.btn-edit {
+    background-color: #0daedf;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #0999c5;
+}
+
+.btn-delete {
+    background-color: #ca0e0e;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background-color: #880808;
+}
+
+
+/* CORE:INDEX */
+
+.index-page {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.index-page .text {
+    text-align: center;
+}
+
+.index-page .text h1 {
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.index-page .text p {
+    font-size: 20px;
+}
+
+.index-page a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 30px;
+    background-color: #fff;
+    border-radius: 25px;
+    border: 1px solid #fff;
+}
+
+.index-page a:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+
+/* BASE */
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    color: #000;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+.header a:hover {
+    background-color: #bdbdbd;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #000;
+    padding: 6px;
+    transition: .5s;
+}
+
+.sidebar.active {
+    width: 260px;
+}
+
+.sidebar .logo-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    color: #fff;
+}
+
+.sidebar .logo-menu .logo {
+    font-size: 25px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.sidebar.active .logo-menu .logo {
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.sidebar .logo-menu .toggle-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.sidebar.active .logo-menu .toggle-btn {
+    left: 90%;
+}
+
+.sidebar .list {
+    margin-top: 10px;
+}
+
+.list .list-item {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    list-style: none;
+    line-height: 50px;
+}
+
+.list .list-item a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.list .list-item.active a,
+.list .list-item a:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.list .list-item a i {
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.sidebar .link-name {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+}
+
+.sidebar.active .link-name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* DASHBOARD:DASHBOARD */
+
+
+/* Weather panel */
+
+.weather {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #71ccd4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.weather .title {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.weather .grades {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.weather .city {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.weather i {
+    font-size: 80px;
+    color: yellow;
+}
+
+.weather .description {
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 200;
+    text-align: center;
+}
+
+
+/* Statistics panel */
+
+
+/* Devices panel */
+
+.devices-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.devices-container .device {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.devices-container .device a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* Taxes panel */
+
+.taxes {
+    display: grid;
+    grid-auto-flow: row;
+    height: 100%;
+    align-items: center;
+}
+
+.taxes p {
+    font-size: 20px;
+}
+
+.taxes span {
+    font-weight: 700;
+}
+
+
+/* Members panel */
+
+.members {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+}
+
+.members .member {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* DEVICE:DEVICE */
+
+.devices-container-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}

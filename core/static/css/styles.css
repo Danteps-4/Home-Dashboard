@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CORE:INDEX */
+
+.home-page {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-page .text {
+    text-align: center;
+}
+
+.home-page .text h1 {
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.home-page .text p {
+    font-size: 20px;
+}
+
+.home-page a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 30px;
+    background-color: #fff;
+    border-radius: 25px;
+    border: 1px solid #fff;
+}
+
+.index-page a:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+
+/* BASE  */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    background-color: #000;
+    padding: 6px;
+}
+
+.sidebar .logo-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    color: #fff;
+}
+
+.sidebar .logo-menu .logo {
+    font-size: 25px;
+}
+
+.sidebar .logo-menu .toggle-btn {
+    position: absolute;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.sidebar .list {
+    margin-top: 10px;
+}
+
+.list .list-item {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    list-style: none;
+    line-height: 50px;
+}
+
+.list .list-item a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    back
+}
+
+.list .list-item.active a,
+.list .list-item a:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.list .list-item a i {
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}

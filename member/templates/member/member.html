@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %} {% block title %}Members{% endblock %}{% block content %}
+<div class="container">
+    <h1 class="title">Members</h1>
+    <div class="panel-container">
+        <div class="members">
+            {% for member in members %}
+            <div class="member">
+                <img src="" alt="">
+                <p class="name">{{member.user.username}}</p>
+                <p class="role">{{member.kindred}}</p>
+                {% if member.is_family_admin %}
+                <p class="type">Admin</p>
+                {% else %}
+                <p class="type">Not admin</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %} {% block title %}Devices{% endblock %}{% block content %}
+<div class="container">
+    <h1 class="title">Your devices</h1>
+    <div class="panel-container">
+        <div class="grid-container">
+            <div class="devices-container-2">
+                <div class="device">
+                    <a href="#">
+                        <img src="" alt="">
+                        <p class="name">IPhone</p>
+                        <a href="#" class="btn btn-edit">Edit</a>
+                        <a href="#" class="btn btn-delete">Delete</a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a href="#" class="btn btn-add">Add device</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'core/base.html' %} {% block title %}HomeFina{% endblock %}{% block content %}
+<div class="container">
+    <h1 class="title">Welcome {{user.username}}!</h1>
+
+    <div class="weather">
+        <div class="info">
+            <p class="title">Weather today</p>
+            <p class="grades">24°C</p>
+            <p class="city">Alta Gracia</p>
+        </div>
+        <div class="image">
+            <i class='bx bx-sun'></i>
+            <p class="description">Sunny</p>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="panel-container">
+            <a class="sub-title" href="#">Statistcs</a>
+        </div>
+        <div class="panel-container">
+            <a class="sub-title" href="#">My Devices</a>
+            <div class="devices-container">
+                <div class="device">
+                    <a href="#">
+                        <img src="" alt="">
+                        <p class="name">IPhone</p>
+                    </a>
+                </div>
+                <div class="device">
+                    <a href="#">
+                        <img src="" alt="">
+                        <p class="name">Apple Watch</p>
+                    </a>
+                </div>
+                <div class="device">
+                    <a href="#">
+                        <img src="" alt="">
+                        <p class="name">TV</p>
+                    </a>
+                </div>
+                <div class="device">
+                    <a href="#">
+                        <img src="" alt="">
+                        <p class="name">View All</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container-2">
+        <div class="panel-container">
+            <a href="#" class="sub-title">Taxes</a>
+            <div class="taxes">
+                <p>Today: <span>$500</span></p>
+                <p>Month: <span>$5141</span></p>
+                <p>Year: <span>$61761</span></p>
+            </div>
+        </div>
+
+        <div class="panel-container">
+            <a class="sub-title" href="#">Members</a>
+            <div class="members">
+                <div class="member">
+                    <img src="" alt="">
+                    <p class="name">Dante</p>
+                    <p class="role">Son</p>
+                    <p class="type">Admin</p>
+                </div>
+                <div class="member">
+                    <img src="" alt="">
+                    <p class="name">Dante</p>
+                    <p class="role">Son</p>
+                    <p class="type">Admin</p>
+                </div>
+                <div class="member">
+                    <img src="" alt="">
+                    <p class="name">Dante</p>
+                    <p class="role">Son</p>
+                    <p class="type">Admin</p>
+                </div>
+                <div class="member">
+                    <img src="" alt="">
+                    <p class="name">Dante</p>
+                    <p class="role">Son</p>
+                    <p class="type">Admin</p>
+                </div>
+                <div class="member">
+                    <img src="" alt="">
+                    <p class="name">Dante</p>
+                    <p class="role">Son</p>
+                    <p class="type">Admin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

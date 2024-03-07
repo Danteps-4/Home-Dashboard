@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href=" {% static 'css/styles.css' %} ">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#"><i class='bx bx-bell'></i></i></a>
+        <a href="#"><i class='bx bx-cog'></i></a> {% if user.is_authenticated %}
+        <a href=""><i class='bx bx-user' ></i>{{user.username}}</a> {% endif %}
+    </header>
+
+    <nav class="sidebar">
+        <div class="logo-menu">
+            <h2 class="logo">HomeFina</h2>
+            <i class='bx bx-menu toggle-btn'></i>
+        </div>
+        <ul class="list">
+            {% if user.is_authenticated %}
+            <li class="list-item">
+                <a href="{% url 'dashboard:dashboard' %}">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="link-name">Dashboard</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="{% url 'device:device' %}">
+                    <i class='bx bx-devices'></i>
+                    <span class="link-name">Devices</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#">
+                    <i class='bx bxs-dollar-circle'></i>
+                    <span class="link-name">Expenses</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#">
+                    <i class='bx bx-stats'></i>
+                    <span class="link-name">Statistics</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="{% url 'member:member' %}">
+                    <i class='bx bx-male-female'></i>
+                    <span class="link-name">Members</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="{% url 'user_auth:sign_out' %}">
+                    <i class='bx bx-log-out'></i>
+                    <span class="link-name">Logout</span>
+                </a>
+            </li>
+            {% else %}
+            <li class="list-item">
+                <a href="{% url 'user_auth:sign_in' %}">
+                    <i class='bx bx-log-in'></i>
+                    <span class="link-name">Sign in</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="{% url 'user_auth:sign_up' %}">
+                    <i class='bx bxs-user-plus'></i>
+                    <span class="link-name">Sign up</span>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    {% block content %} {% endblock %}
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+
+</html>
