@@ -60,38 +60,18 @@
         </div>
 
         <div class="panel-container">
-            <a class="sub-title" href="#">Members</a>
+            <a class="sub-title" href="{% url 'member:member' %}">Members</a>
             <div class="members">
-                <div class="member">
-                    <img src="" alt="">
-                    <p class="name">Dante</p>
-                    <p class="role">Son</p>
-                    <p class="type">Admin</p>
-                </div>
-                <div class="member">
-                    <img src="" alt="">
-                    <p class="name">Dante</p>
-                    <p class="role">Son</p>
-                    <p class="type">Admin</p>
-                </div>
-                <div class="member">
-                    <img src="" alt="">
-                    <p class="name">Dante</p>
-                    <p class="role">Son</p>
-                    <p class="type">Admin</p>
-                </div>
-                <div class="member">
-                    <img src="" alt="">
-                    <p class="name">Dante</p>
-                    <p class="role">Son</p>
-                    <p class="type">Admin</p>
-                </div>
-                <div class="member">
-                    <img src="" alt="">
-                    <p class="name">Dante</p>
-                    <p class="role">Son</p>
-                    <p class="type">Admin</p>
-                </div>
+            {% for member in members %}
+            <div class="member">
+                <img src="" alt="">
+                <p class="name">{{member.user.username}}</p>
+                <p class="kindred">{{member.kindred}}</p>
+            </div>
+            {% endfor %}
+            <div class="member">
+                <a href="{% url 'member:member' %}" class="btn btn-edit">View all</a>
+            </div>
             </div>
         </div>
     </div>

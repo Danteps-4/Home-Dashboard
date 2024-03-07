@@ -7,15 +7,18 @@
             <div class="member">
                 <img src="" alt="">
                 <p class="name">{{member.user.username}}</p>
-                <p class="role">{{member.kindred}}</p>
+                <p class="kindred">{{member.kindred}}</p>
                 {% if member.is_family_admin %}
-                <p class="type">Admin</p>
+                <p class="is_family_admin">Admin</p>
                 {% else %}
                 <p class="type">Not admin</p>
                 {% endif %}
+                <a href="#" class="btn btn-edit">Edit member</a>
+                <a href="#" class="btn btn-delete">Delete member</a>
             </div>
             {% endfor %}
         </div>
     </div>
+    <a href="#" class="btn-add btn">Add member</a>
 </div>
 {% endblock %}

@@ -7,3 +7,6 @@ def member(request):
     person = get_object_or_404(Person, user=request.user)
     family_persons = Family.list_members(person)
     return render(request, "member/member.html", {"members": family_persons})
+
+def add_member(request):
+    return render(request, "member/add.html")
